@@ -1,0 +1,17 @@
+command-blocker:
+  enabled: true
+  groups:
+    # Permission will be `securus.commandblocker.group.default`
+    default:
+      mode: ONLY
+      action: DENY
+      commands:
+        - about
+      tab-complete:
+        - about
+    staff:
+      mode: NOTHING
+      action: DENY
+locales:
+  - en_US
+  - de_DE

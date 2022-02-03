@@ -1,0 +1,8 @@
+name: Securus
+main: net.platzhaltergaming.securus.bungee.Main
+author: "Alexander Trost"
+version: ${project.version}
+depends:
+  - Protocolize
+libraries:
+  - com.ibm.icu:icu4j:70.1

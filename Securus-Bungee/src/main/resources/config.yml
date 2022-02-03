@@ -1,0 +1,19 @@
+command-blocker:
+  enabled: true
+  groups:
+    # Permission will be `securus.commandblocker.group.default`
+    default:
+      mode: ONLY
+      action: DENY
+      deny-message: PERMISSION DENIED
+      commands: []
+      tab-complete: []
+    staff:
+      mode: NOTHING
+      action: DENY
+f3-name:
+  enabled: true
+  brand: "§6proxy-0§e->§b%server_name%"
+locales:
+  - en_US
+  - de_DE

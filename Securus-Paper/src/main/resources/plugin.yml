@@ -1,0 +1,7 @@
+name: Securus
+api-version: 1.18
+main: net.platzhaltergaming.securus.paper.Main
+author: "Alexander Trost"
+version: ${project.version}
+libraries:
+  - com.ibm.icu:icu4j:70.1
