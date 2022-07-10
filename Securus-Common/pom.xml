@@ -28,7 +28,7 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.18.20</version>
+      <version>1.18.24</version>
       <scope>provided</scope>
     </dependency>
     <!-- Configurate -->
@@ -87,62 +87,6 @@
             <arg>-parameters</arg>
           </compilerArgs>
         </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-shade-plugin</artifactId>
-        <version>3.3.0-SNAPSHOT</version>
-        <configuration>
-          <dependencyReducedPomLocation>${project.build.directory}/dependency-reduced-pom.xml</dependencyReducedPomLocation>
-          <artifactSet>
-            <excludes>
-              <exclude>com.google.*:*</exclude>
-              <exclude>org.checkerframework*:*</exclude>
-              <exclude>org.jetbrains:*</exclude>
-              <exclude>net.kyori:*</exclude>
-            </excludes>
-          </artifactSet>
-          <relocations>
-            <!-- Configurate -->
-            <relocation>
-              <pattern>org.spongepowered.configurate</pattern>
-              <shadedPattern>net.platzhaltergaming.securus.libs.org.spongepowered.configurate</shadedPattern>
-            </relocation>
-            <relocation>
-              <pattern>com.typesafe.config</pattern>
-              <shadedPattern>net.platzhaltergaming.securus.libs.com.typesafe.config</shadedPattern>
-            </relocation>
-            <relocation>
-              <pattern>io.leangen.geantyref</pattern>
-              <shadedPattern>net.platzhaltergaming.securus.libs.io.leangen.geantyref</shadedPattern>
-            </relocation>
-            <relocation>
-              <pattern>org.yaml.snakeyaml</pattern>
-              <shadedPattern>net.platzhaltergaming.securus.libs.org.yaml.snakeyaml</shadedPattern>
-            </relocation>
-            <!-- CommonLib Messages -->
-            <relocation>
-              <pattern>net.platzhaltergaming.commonlib.messages</pattern>
-              <shadedPattern>net.platzhaltergaming.securus.libs.net.platzhaltergaming.commonlib.messages</shadedPattern>
-            </relocation>
-          </relocations>
-          <filters>
-            <filter>
-              <artifact>*:*</artifact>
-              <excludes>
-                <exclude>META-INF/**</exclude>
-              </excludes>
-            </filter>
-          </filters>
-        </configuration>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>shade</goal>
-            </goals>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
   </build>
