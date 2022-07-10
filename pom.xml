@@ -4,7 +4,7 @@
 
   <groupId>net.platzhaltergaming</groupId>
   <artifactId>Securus</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
 
   <modules>
     <module>Securus-Common</module>
