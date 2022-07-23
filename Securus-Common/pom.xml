@@ -63,7 +63,7 @@
       <groupId>net.platzhaltergaming.commonlib</groupId>
       <artifactId>Messages</artifactId>
       <version>1.1.0</version>
-      <scope>compile</scope>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 
@@ -87,70 +87,6 @@
             <arg>-parameters</arg>
           </compilerArgs>
         </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-shade-plugin</artifactId>
-        <version>3.3.1-SNAPSHOT</version>
-        <configuration>
-          <dependencyReducedPomLocation>${project.build.directory}/dependency-reduced-pom.xml</dependencyReducedPomLocation>
-          <artifactSet>
-            <excludes>
-              <exclude>com.google.*:*</exclude>
-              <exclude>org.checkerframework*:*</exclude>
-              <exclude>org.jetbrains:*</exclude>
-              <exclude>net.kyori:adventure-api</exclude>
-              <exclude>net.kyori:adventure-key</exclude>
-              <exclude>net.kyori:examination-api</exclude>
-              <exclude>net.kyori:examination-string</exclude>
-            </excludes>
-          </artifactSet>
-          <relocations>
-            <!-- Configurate -->
-            <relocation>
-              <pattern>org.spongepowered.configurate</pattern>
-              <shadedPattern>net.platzhaltergaming.securus.libs.org.spongepowered.configurate</shadedPattern>
-            </relocation>
-            <relocation>
-              <pattern>com.typesafe.config</pattern>
-              <shadedPattern>net.platzhaltergaming.securus.libs.com.typesafe.config</shadedPattern>
-            </relocation>
-            <relocation>
-              <pattern>io.leangen.geantyref</pattern>
-              <shadedPattern>net.platzhaltergaming.securus.libs.io.leangen.geantyref</shadedPattern>
-            </relocation>
-            <relocation>
-              <pattern>org.yaml.snakeyaml</pattern>
-              <shadedPattern>net.platzhaltergaming.securus.libs.org.yaml.snakeyaml</shadedPattern>
-            </relocation>
-            <!-- CommonLib -->
-            <relocation>
-              <pattern>net.platzhaltergaming.commonlib</pattern>
-              <shadedPattern>net.platzhaltergaming.securus.libs.net.platzhaltergaming.commonlib</shadedPattern>
-            </relocation>
-            <!-- MiniMessage -->
-            <relocation>
-              <pattern>net.kyori.adventure.text.minimessage</pattern>
-              <shadedPattern>net.platzhaltergaming.securus.libs.net.kyori.adventure.text.minimessage</shadedPattern>
-            </relocation>
-          </relocations>
-          <filters>
-            <filter>
-              <artifact>*:*</artifact>
-              <excludes>
-                <exclude>META-INF/**</exclude>
-              </excludes>
-            </filter>
-          </filters>
-        </configuration>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>shade</goal>
-            </goals>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
   </build>
