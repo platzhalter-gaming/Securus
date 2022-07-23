@@ -1,3 +1,11 @@
+locales:
+  - en_US
+  - de_DE
+
+f3-name:
+  enabled: true
+  brand: "§6proxy-0§e->§b%server_name%"
+
 command-blocker:
   enabled: true
   groups:
@@ -11,9 +19,3 @@ command-blocker:
     staff:
       mode: NOTHING
       action: DENY
-f3-name:
-  enabled: true
-  brand: "§6proxy-0§e->§b%server_name%"
-locales:
-  - en_US
-  - de_DE

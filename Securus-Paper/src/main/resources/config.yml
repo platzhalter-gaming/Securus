@@ -1,3 +1,7 @@
+locales:
+  - en_US
+  - de_DE
+
 command-blocker:
   enabled: true
   groups:
@@ -12,6 +16,3 @@ command-blocker:
     staff:
       mode: NOTHING
       action: DENY
-locales:
-  - en_US
-  - de_DE
