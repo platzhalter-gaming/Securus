@@ -72,7 +72,7 @@
     <repository>
       <id>github</id>
       <name>GitHub platzhalter-gaming Apache Maven Packages</name>
-      <url>https://maven.pkg.github.com/platzhalter-gaming/CommonLib</url>
+      <url>https://maven.pkg.github.com/platzhalter-gaming/Securus</url>
       <layout>default</layout>
     </repository>
   </distributionManagement>
