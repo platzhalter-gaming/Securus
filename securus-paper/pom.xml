@@ -8,7 +8,7 @@
     <version>1.0.1</version>
   </parent>
 
-  <artifactId>securus-Paper</artifactId>
+  <artifactId>securus-paper</artifactId>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
